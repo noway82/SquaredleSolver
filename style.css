@@ -1,0 +1,16 @@
+.letterInput {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
+}
+td {
+    border: 2px solid black;
+    height: 2em;
+    width: 2em;
+    padding: 0;
+}
+table {
+    margin: auto ;
+}

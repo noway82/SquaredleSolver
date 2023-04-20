@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<table id="board" style="border: 2px solid black;">
+			<tr>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+			</tr>
+			<tr>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+			</tr>
+			<tr>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+			</tr>
+			<tr>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+				<td><input type="text" maxlength="1" class="letterInput"></td>
+			</tr>
+		</table>
+		<label for="boardsize">Board size: <input type="number" name="boardsize" id="boardsize" value="4" min="3"></label>
+		<button id="start">solve</button>
+		<div id="display"></div>
+		<script src="trie.js"></script>
+		<script src="interface.js"></script>
+		<script src="solver.js"></script>
+	</body>
+</html>
