@@ -20,6 +20,10 @@ function sortLengths(arr) {
 }
 
 $(document).ready(() => {
+  let squares = $(".letterInput");
+    for (let k = 0; k < squares.length; k++) {
+      $(squares[k]).attr("id", "sq" + k);
+    }
 	$("#boardsize").on("change", () => {
 		if ($("#boardsize").val() < 3) {
 			return;
@@ -31,14 +35,25 @@ $(document).ready(() => {
 		}
 		for (let j = 0; j < $("#boardsize").val(); j++) {
 			$("#board").append("<tr>" + td + "</tr>");
-		}
+    }
+		let squares = $(".letterInput");
+    for (let k = 0; k < squares.length; k++) {
+      $(squares[k]).attr("id", "sq" + k);
+    }  
 	});
 	$("#start").on("click", () => {
 		$("#display").empty();
-		let row = [];
+    let start = 0;
 		for (let i = 0; i < $("#boardsize").val(); i++) {
-			row.push(new Square());
+      let row = [];
+      for (let j = 0; j < $("#boardsize").val(); j++) {
+          let value = $("#sq" + (j + start)).val();
+			   row.push(new Square(value.toLowerCase()));
+      }
+      board.push(row);
+      start += parseInt($("#boardsize").val());
 		}
+    console.log(board);
 		for (let y = 0; y < board.length; y++) {
 			for (let x = 0; x < board.length; x++) {
 				for (let row of board) {
